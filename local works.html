@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>நம்ம ஊரு 360 | தேடல் தளம்</title>
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="all in one.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <i class="fa-solid fa-layer-group store-logo-icon"></i>
+            <h1>Local Workers<br><span></span></h1>
+        </div>
+        <button id="tips-btn" class="tips-header-btn">
+            <i class="fa-solid fa-hand-holding-heart"></i> tips
+        </button>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <h2>உங்கள் இல்லத்திற்கான இராஜபோக சேவைகள்<br><span>Home Care</span></h2>
+            <p class="hero-sub">சிறந்த பெயிண்டர்கள், கிளீனர்கள், லோடு மேன் மற்றும் தோட்டத் தொழிலாளர்கள் ஒரே இடத்தில்.</p>
+            
+            <div class="search-box-container">
+                <div class="input-wrapper">
+                    <i class="fa-solid fa-location-dot search-icon"></i>
+                    <input type="text" id="area-search" placeholder="ஏரியா அல்லது தேட வேண்டிய பெயர்...">
+                </div>
+                <div class="select-wrapper">
+                    <i class="fa-solid fa-filter brief-icon"></i>
+                    <select id="product-filter">
+                        <option value="all">அனைத்து ராயல் சேவைகளும்</option>
+                        <option value="cat1">பெயிண்டர் (Painter)</option>
+                        <option value="cat2">கிளீனர் (Deep Cleaner)</option>
+                        <option value="cat3">லோடு மேன் (Load Man)</option>
+                        <option value="cat4">தோட்டத் தொழிலாளர் (Gardener)</option>
+                    </select>
+                </div>
+                <button id="search-btn">தேடுங்கள்</button>
+            </div>
+        </section>
+
+        <section class="register-trigger-section">
+            <button id="open-form-btn" class="main-register-btn">
+                <i class="fa-solid fa-circle-plus"></i> நீங்கள் ஒரு சிறந்த தொழிலாளியா? இங்கு இணையுங்கள் (Register)
+            </button>
+        </section>
+
+        <section class="quick-categories">
+            <h3>பிரத்தியேக சேவைகள்</h3>
+            <div class="category-chips">
+                <button class="chip active" data-filter="all">All</button>
+                <button class="chip" data-filter="cat1"><i class="fa-solid fa-paint-roller"></i>  Painters</button>
+                <button class="chip" data-filter="cat2"><i class="fa-solid fa-broom"></i> Cleaners</button>
+                <button class="chip" data-filter="cat3"><i class="fa-solid fa-truck-ramp-box"></i> Load Men</button>
+                <button class="chip" data-filter="cat4"><i class="fa-solid fa-seedling"></i> Gardeners</button>
+            </div>
+        </section>
+
+        <section class="experts-section">
+            <div class="section-title-area">
+                <h3>சான்றளிக்கப்பட்ட வல்லுநர்கள்</h3>
+                <span id="results-count">0 பதிவுகள் உள்ளன</span>
+            </div>
+            <div class="experts-grid" id="product-grid"></div>
+        </section>
+    </main>
+
+    <div id="register-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fa-solid fa-file-signature"></i> புதிய உறுப்பினர் சேர்க்கை</h3>
+                <span class="close-btn" id="close-reg-btn">&times;</span>
+            </div>
+            <form id="product-form">
+                <div class="form-group">
+                    <label><i class="fa-solid fa-heading"></i> உங்கள் பெயர்(Name)</label>
+                    <input type="text" id="shop-name" placeholder="உதாரணம்: நிறுவன பெயர் / கடை பெயர்" required>
+                </div>
+
+                <div class="form-group">
+                    <label><i class="fa-solid fa-circle-info"></i> துணைப் பெயர்(Sub Name)</label>
+                    <input type="text" id="owner-name" placeholder="உதாரணம்: சேவை வகை / உரிமையாளர்" required>
+                </div>
+
+                <div class="form-group">
+                    <label><i class="fa-solid fa-phone"></i> தொடர்பு எண் (WhatsApp எண்)</label>
+                    <input type="tel" id="phone" placeholder="98765xxxxx" required>
+                </div>
+
+                <div class="form-group">
+                    <label><i class="fa-solid fa-list"></i> வகையைத் தேர்ந்தெடு (Category)</label>
+                    <select id="prod-type" required>
+                        <option value="cat1">பெயிண்டர் (Painter)</option>
+                        <option value="cat2">கிளீனர் (Deep Cleaner)</option>
+                        <option value="cat3">லோடு மேன் (Load Man)</option>
+                        <option value="cat4">தோட்டத் தொழிலாளர் (Gardener)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label><i class="fa-solid fa-circle-nodes"></i> கூடுதல் விபரம் (Extra Info / Price)</label>
+                    <input type="text" id="delivery-info" placeholder="உதாரணம்: சலுகைகள் அல்லது கூடுதல் தகவல்" required>
+                </div>
+
+                <div class="form-group">
+                    <label><i class="fa-solid fa-map-location-dot"></i> இருக்கும் இடம் (Location)</label>
+                    <input type="text" id="location" placeholder="உதாரணம்: நகரின் பெயர் / ஏரியா" required>
+                </div>
+
+                <button type="submit" class="submit-btn">விபரங்களைச் சமர்ப்பிக்க</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="tips-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fa-solid fa-gem" style="color: #cda12c;"></i> ஆதரவு அளிக்க</h3>
+                <span class="close-btn" id="close-tips-btn">&times;</span>
+            </div>
+            <div style="text-align: center; margin-bottom: 15px;">
+                <p style="font-size: 14px; color: #4B5563;">இந்தத் தளம் தொடர்ந்து சிறப்பாக இயங்க உங்களால் முடிந்த சிறு தொகையை வழங்கி ஊக்குவிக்கலாம்!</p>
+            </div>
+            <form id="tips-form">
+                <div class="form-group">
+                    <label><i class="fa-solid fa-user"></i> உங்கள் பெயர் (விரும்பினால்)</label>
+                    <input type="text" id="payer-name" placeholder="உதாரணம்: அன்பு">
+                </div>
+                <div class="form-group">
+                    <label><i class="fa-solid fa-indian-rupee-sign"></i> தொகையை உள்ளிடவும் (Amount)</label>
+                    <input type="number" id="tips-amount" placeholder="100" min="1" required>
+                </div>
+                <a id="upi-pay-link" href="#" class="submit-btn" style="background: linear-gradient(135deg, #cda12c 0%, #916f19 100%); color: #0f1c3f; text-align: center; text-decoration: none; display: block;">
+                    <i class="fa-solid fa-credit-card"></i> Pay via UPI App
+                </a>
+            </form>
+        </div>
+    </div>
+
+    <div id="success-modal" class="modal" style="z-index: 2000; align-items: center;">
+        <div class="modal-content" style="border-radius: 24px; max-width: 360px; text-align: center; margin: auto 20px; border-top: none; padding: 30px 24px;">
+            <div style="margin-bottom: 20px;">
+                <i class="fa-solid fa-circle-check" style="color: #10B981; font-size: 70px;"></i>
+            </div>
+            <h3 style="font-size: 20px; font-weight: 700; color: #0f1c3f; margin-bottom: 12px; line-height: 1.4;">பதிவு வெற்றிகரமாக முடிந்தது!</h3>
+            <p style="font-size: 13px; color: #6B7280; margin-bottom: 25px; line-height: 1.6; font-weight: 500;">உங்களின் விபரங்கள் வெற்றிகரமாகச் சேமிக்கப்பட்டது. தற்போது இணையத்தில் லைவ் செய்யப்பட்டுள்ளது!</p>
+            <button id="success-ok-btn" style="background: #0f1c3f; color: white; border: none; width: 100%; padding: 14px; border-radius: 14px; font-weight: 600; cursor: pointer; font-size: 15px;">சரி</button>
+        </div>
+    </div>
+
+    <script src="local works.js"></script>
+</body>
+</html>

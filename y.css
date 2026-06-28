@@ -1,0 +1,222 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    /* Image-la irukkura deep navy blue background */
+    background-color: #0E1B31;
+    color: #FFFFFF;
+    padding: 15px;
+}
+
+.hub-container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding-top: 40px;
+}
+
+.hub-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.hub-header h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #FFFFFF; /* White-ku mathiyachu */
+}
+
+/* Namma Local-la varra antha yellow dot */
+.hub-dot { color: #C2941D; }
+
+.hub-header p {
+    font-size: 13px;
+    color: #A0AAB5; /* Enna seiyalam-nu solra subtext, light grey-ish blue */
+    margin-top: 5px;
+}
+
+.hub-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Card design: Dark background-ku set aahra mathiri clean look */
+.hub-card {
+    width: 100%;
+    background: #172641; /* Slightly lighter navy blue for card contrast */
+    border: 1px solid rgba(255, 255, 255, 0.08); /* Soft subtle border */
+    border-radius: 20px;
+    padding: 18px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-decoration: none; 
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.hub-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(194, 148, 29, 0.4); /* Hover panna gold border lighting varum */
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+.hub-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+.hub-text {
+    flex-grow: 1;
+}
+
+.hub-text h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #FFFFFF; /* Text visibility-kaga white */
+}
+
+.hub-text p {
+    font-size: 12px;
+    color: #A0AAB5; /* Description text visibility */
+    margin-top: 2px;
+}
+
+.arrow-link {
+    color: #C2941D; /* Right arrow gold color-ku mathiyachu */
+    font-size: 14px;
+}
+
+/* ==========================================================================
+   Voice Search & Custom Cards Theme Styling
+   ========================================================================== */
+.search-container {
+    max-width: 500px;
+    margin: 0 auto 30px auto;
+    position: relative;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+}
+
+.search-container input {
+    width: 100%;
+    padding: 12px 50px 12px 45px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    border: 2px solid #e0e0e0;
+    border-radius: 30px;
+    outline: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.search-container input:focus {
+    border-color: #ff5722;
+    box-shadow: 0 4px 12px rgba(255, 87, 34, 0.15);
+}
+
+.search-container .search-icon {
+    position: absolute;
+    left: 32px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #a0a0a0;
+    font-size: 16px;
+}
+
+#voiceSearchBtn {
+    position: absolute;
+    right: 28px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #ff5722;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+#voiceSearchBtn.listening {
+    color: #e53935;
+    animation: voicePulse 1.2s infinite;
+}
+
+@keyframes voicePulse {
+    0% { transform: translateY(-50%) scale(1); }
+    50% { transform: translateY(-50%) scale(1.2); opacity: 0.7; }
+    100% { transform: translateY(-50%) scale(1); }
+}
+
+/* Green Theme for Sandhai Card */
+.card-sandhai {
+    border-left: 5px solid #2ecc71 !important;
+}
+.card-sandhai .hub-icon {
+    color: #2ecc71;
+}
+.card-sandhai:hover {
+    box-shadow: 0 8px 16px rgba(46, 204, 113, 0.2) !important;
+}
+
+/* Red Theme for Emergency Card */
+.card-emergency {
+    border-left: 5px solid #e74c3c !important;
+}
+.card-emergency .hub-icon {
+    color: #e74c3c;
+}
+.card-emergency:hover {
+    box-shadow: 0 8px 16px rgba(231, 76, 60, 0.2) !important;
+}
+
+/* Blue Theme for Job Vacancy Card */
+.card-job {
+    border-left: 5px solid #3498db !important;
+}
+.card-job .hub-icon {
+    color: #3498db;
+}
+.card-job:hover {
+    box-shadow: 0 8px 16px rgba(52, 152, 219, 0.2) !important;
+}
+
+/* Arrow icon-களை தங்க நிறமாக மாற்ற */
+.arrow-link {
+    color: #FFD700 !important; /* பிரகாசமான தங்க நிறம் (Gold) */
+}
+
+/* NammaOoru 360 பக்கத்தில் உள்ள புள்ளியை தங்க நிறமாக மாற்ற */
+.hub-dot {
+    color: #FFD700 !important;
+}
+
+/* ஒருவேளை கார்டுக்குள் இருக்கும் அனைத்து மெயின் ஐகான்களும் (Font Awesome icons) 
+   தங்க நிறத்தில் மாற வேண்டும் என்றால், கீழே உள்ளதை பயன்படுத்தவும் (விருப்பப்பட்டால் மட்டும்): */
+.hub-icon i {
+    color: #FFD700;
+}
+
+
+/* 🎨 Gold & Dark Blue Dynamic Theme for Cards 
+   Intha unique cards-oda icon boxes-ku soft gold shades and white matching senjiruken */
+.card-workers .hub-icon { background: rgba(194, 148, 29, 0.15); color: #E5B837; }
+.card-ooru .hub-icon { background: rgba(194, 148, 29, 0.2); color: #FFFFFF; border: 1px solid #C2941D; }
+.card-pakkathula .hub-icon { background: #C2941D; color: #0E1B31; } /* Premium Solid Gold style */
+.card-local .hub-icon { background: rgba(255, 255, 255, 0.1); color: #E5B837; }
+.card-rentals .hub-icon { background: rgba(194, 148, 29, 0.15); color: #C2941D; }
+
