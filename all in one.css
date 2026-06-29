@@ -119,3 +119,14 @@ header {
     border: none; padding: 8px 16px; border-radius: 50px; font-size: 12px; font-weight: 700; cursor: pointer;
     box-shadow: 0 4px 10px rgba(205,161,44,0.3);
 }
+.section-title-area {
+    display: flex !important;
+    flex-direction: column !important; /* மொபைல்ல ஒன்னுக்கு கீழ ஒன்னு வர */
+    align-items: flex-start !important;
+    gap: 10px !important;
+}
+
+/* 3 பதிவுகள் உள்ளன என்ற நீல நிற பேட்ஜுக்கான ஸ்டைல் */
+#results-count {
+    white-space: nowrap !important; 
+}
