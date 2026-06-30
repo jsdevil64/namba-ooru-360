@@ -80,12 +80,12 @@ function renderCards(dataToRender = dataList) {
         const extraInfo = item.delivery  || item["delivery"]  || Object.values(item)[5] || "";
         const location  = item.location  || item["location"]  || Object.values(item)[6] || "இடம் இல்லை";
 
-        let iconHtml = '<i class="fa-solid fa-box"></i>'; 
-        let typeBadge = 'பிரிவு 1';
+        let iconHtml = '<i class="fa-solid trowel-bricks"></i>'; 
+        let typeBadge = 'Mixer & Lift';
         
-        if(type.toString().toLowerCase() === 'cat2') { iconHtml = '<i class="fa-solid fa-tags"></i>'; typeBadge = 'பிரிவு 2'; }
-        if(type.toString().toLowerCase() === 'cat3') { iconHtml = '<i class="fa-solid fa-store"></i>'; typeBadge = 'பிரிவு 3'; }
-        if(type.toString().toLowerCase() === 'cat4') { iconHtml = '<i class="fa-solid fa-star"></i>'; typeBadge = 'பிரிவு 4'; }
+        if(type.toString().toLowerCase() === 'cat2') { iconHtml = '<i class="fa-solid fa-bolt"></i>'; typeBadge = 'Generator'; }
+        if(type.toString().toLowerCase() === 'cat3') { iconHtml = '<i class="fa-solid fa-volume-high"></i>'; typeBadge = 'Sound System'; }
+        if(type.toString().toLowerCase() === 'cat4') { iconHtml = '<i class="fa-solid fa-campground"></i>'; typeBadge = 'Pandal Goods'; }
 
         card.innerHTML = `
             <div class="card-left">
