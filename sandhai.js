@@ -1,6 +1,6 @@
 
 const SCRIPT_URL = ' https://script.google.com/macros/s/AKfycbw7WbLW4XazgrrponUPhoLNN6CPgWUAWAPOg1SnpvwE4LJ-j2jvjwTN4eJ_-LNoa9MHqA/exec ';
-‎
+
 ‎const productGrid = document.getElementById('product-grid');
 ‎const openFormBtn = document.getElementById('open-form-btn');
 ‎const registerModal = document.getElementById('register-modal');
