@@ -1,5 +1,5 @@
 
-const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxNvbRnartn249FbRBNfgZC2xV7Z2ffCWfY23xWQWsDyqPqHwZmehMZYKK_U_qYvoXbWA/exec';
+const SCRIPT_URL = ' https://script.google.com/macros/s/AKfycbw7WbLW4XazgrrponUPhoLNN6CPgWUAWAPOg1SnpvwE4LJ-j2jvjwTN4eJ_-LNoa9MHqA/exec ';
 ‎
 ‎const productGrid = document.getElementById('product-grid');
 ‎const openFormBtn = document.getElementById('open-form-btn');
@@ -81,12 +81,12 @@ const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxNvbRnartn249FbRBNf
 ‎        const extraInfo = item.delivery  || item["delivery"]  || Object.values(item)[5] || "";
 ‎        const location  = item.location  || item["location"]  || Object.values(item)[6] || "இடம் இல்லை";
 ‎
-‎        let iconHtml = '<i class="fa-solid fa-carrot"></i>'; 
-‎        let typeBadge = 'காய்கறிகள்';
+‎        let iconHtml = '<i class="fa-solid fa-building"></i>'; 
+‎        let typeBadge = 'அலுவலகம்';
 ‎        
-‎        if(type.toString().toLowerCase() === 'cat2') { iconHtml = '<i class="fa-solid fa-seedling"></i>'; typeBadge = 'கீரைகள்; }
-‎        if(type.toString().toLowerCase() === 'cat3') { iconHtml = '<i class="fa-solid fa-cow"></i>'; typeBadge = 'பால் / நெய்'; }
-‎        if(type.toString().toLowerCase() === 'cat4') { iconHtml = '<i class="fa-solid fa-tree"></i>'; typeBadge = 'தேங்காய் / இளநீர்'; }
+‎        if(type.toString().toLowerCase() === 'cat2') { iconHtml = '<i class="fa-solid fa-motorcycle"></i>'; typeBadge = 'டெலிவரி'; }
+‎        if(type.toString().toLowerCase() === 'cat3') { iconHtml = '<i class="fa-solid fa-shopping"></i>'; typeBadge = 'கடைகள்'; }
+‎        if(type.toString().toLowerCase() === 'cat4') { iconHtml = '<i class="fa-solid fa-wrench"></i>'; typeBadge = 'டெக்னிக்கல்'; }
 ‎
 ‎        card.innerHTML = `
 ‎            <div class="card-left">
