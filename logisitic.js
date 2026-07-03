@@ -1,4 +1,4 @@
-const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz8AgisV7NwbSe1NSWZGriwKSaTaXq4j1LhJQkwcNjavcVjuONyFjBpmodA24y7gj_x/exec';
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxZmGimtG6DI-5sNffTVqP4Ah0xG4ghTTC-VrieujlvyhPYdwGofCDujk4eTzYEx0K9/exec';
 
 const productGrid = document.getElementById('product-grid');
 const openFormBtn = document.getElementById('open-form-btn');
@@ -81,10 +81,10 @@ function renderCards(dataToRender = dataList) {
         const location  = item.location  || item["location"]  || Object.values(item)[6] || "இடம் இல்லை";
 
         let iconHtml = '<i class="fa-solid fa-motorcycle"></i>'; 
-        let typeBadge = '2 Wheeler (XL)';
+        let typeBadge = '2-Wheeler (XL)';
         
-        if(type.toString().toLowerCase() === 'cat2') { iconHtml = '<i class="fa-solid fa-truck-pickup"></i>'; typeBadge = '4-Wheeler (Tata Ace); }
-        if(type.toString().toLowerCase() === 'cat3') { iconHtml = '<i class="fa-solid fa-truck"></i>'; typeBadge = '6-Wheeler (Truck)'; }
+        if(type.toString().toLowerCase() === 'cat2') { iconHtml = '<i class="fa-solid fa-truck-pickup"></i>'; typeBadge = '4-Wheeler (Tata Ace)'; }
+        if(type.toString().toLowerCase() === 'cat3') { iconHtml = '<i class="fa-solid fa-truck"></i>'; typeBadge = ' 6-Wheeler (Truck)'; }
         if(type.toString().toLowerCase() === 'cat4') { iconHtml = '<i class="fa-solid fa-truck-flatbed"></i>'; typeBadge = '10-Wheeler (Lorry)'; }
 
         card.innerHTML = `
@@ -205,3 +205,5 @@ productForm.addEventListener('submit', async (e) => {
 });
 
 document.addEventListener('DOMContentLoaded', loadDataFromSheet);
+
+
